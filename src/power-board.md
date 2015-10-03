@@ -16,9 +16,11 @@
 
 ## Set up
 
- 1. Set the bench PSU to 12V with a 200mA current limit.
+ 1. Set the bench PSU to **12V** with a **200mA** current limit.
 
 ## Procedure
+
+*Execution time*: UNKNOWN
 
  1. Ensure that the procedure outlined in the *General Maintenance* document has been carried out.
  1. Inspect the case for any cracks or missing pieces and replace panels as necessary.
@@ -27,10 +29,10 @@
  1. Connect the power board to the laptop with the micro USB cable.
  1. Turn on the bench PSU and the power board (don't forget the external power connector).
  1. Check that the board draws no more than **????mA**.
- 1. Check that the 5V output is indeed 5V.
+ 1. Check that the 5V output measures **5V±100mV**.
  1. Check that the fan is spinning.
- 1. Slowly turn the bench PSU voltage down to 9V. When passing 10.2V the power board should shut off all outputs and start beeping. When passing 9.6V the power board should turn off completely.
- 1. Slowly turn the bench PSU voltage up to 12V. When passing 11.1V the power board should turn back on.
+ 1. Slowly turn the bench PSU voltage down to **9V**. When passing **10.2V** the power board should shut off all outputs and start beeping. When passing **9.6V** the power board should turn off completely.
+ 1. Slowly turn the bench PSU voltage up to **12V**. When passing **11.1V** the power board should turn back on.
  1. Turn off the bench PSU and power board.
  1. Connect the battery wires to the high current PSU.
  1. Connect the dummy loads to the power board outputs `H0`, `H1`, `L0` and `L1`.
