@@ -19,7 +19,7 @@ $(PDF_DIR):
 	mkdir -p $@
 
 $(PDF_DIR)/%.pdf: $(SRC_DIR)/%.md
-	pandoc -f markdown -V geometry="paper=a4paper,margin=2cm" -o $@ <(cat $< <(echo -e "\n [^1]: Generated from kit-maintenance-docs.git@${HASH} at ${DATE}"))
+	pandoc --latex-engine=xelatex -f markdown -V geometry="paper=a4paper,margin=2cm" -o $@ <(cat $< <(echo -e "\n [^1]: Generated from kit-maintenance-docs.git@${HASH} at ${DATE}"))
 
 .PHONY: clean
 clean:
