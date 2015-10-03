@@ -20,7 +20,7 @@
 
 ## Procedure
 
-*Execution time*: UNKNOWN
+*Execution time*: 3 minutes per board assuming no case panel replacement.
 
  1. Ensure that the procedure outlined in the *General Maintenance* document has been carried out.
  1. Inspect the case for any cracks or missing pieces and replace panels as necessary.
