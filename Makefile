@@ -7,7 +7,6 @@ SRC_DIR = src
 PDF_DIR = pdfs
 
 MD_SRCS = $(wildcard $(SRC_DIR)/*.md)
-# PDFS = $(addprefix $(PDF_DIR)/,$($(noitdir MD_SRCS):.md=.pdf))
 PDFS = $(patsubst $(SRC_DIR)/%.md,$(PDF_DIR)/%.pdf,$(MD_SRCS))
 
 .PHONY: all
