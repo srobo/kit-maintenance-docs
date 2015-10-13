@@ -29,8 +29,8 @@
  1. Connect the battery wires to the bench PSU.
  1. Connect the power board to the laptop with the micro USB cable.
  1. Turn on the bench PSU and the power board (don't forget the external power connector).
- 1. Check that the board draws no more than **????mA±??mA**.
- 1. Check that the 5V output measures **5V±100mV**.
+ 1. Check that the board draws no more than **160mA**.
+ 1. Check that the 5V output measures **5V±150mV**.
  1. Check that the fan is spinning.
  1. Slowly turn the bench PSU voltage down to **9V**. When passing **10.2V±10mV** the power board should shut off all outputs and start beeping. When passing **9.6V±10mV** the power board should turn off completely.
  1. Slowly turn the bench PSU voltage up to **12V**. When passing **11.1V±10mV** the power board should turn back on.
@@ -38,7 +38,7 @@
  1. Connect the battery wires to the high current PSU.
  1. Connect the dummy loads to the power board outputs `H0`, `H1`, `L0` and `L1`.
  1. Turn on the high current PSU and the power board.
- 1. Run `XXXXXXX` and follow the instructions.
+ 1. Run `./scripts/power_test.py` and follow the instructions.
 
 [^2]: 1.5Ω 100W resistor (or 7× 10Ω 15W resistors in parallel) to 7.5mm camcon plug (Farnell 3882275)
 [^3]: Farnell 1793033
