@@ -4,7 +4,6 @@
 
  * Laptop
  * Small flat bladed screwdriver
- * Spare case panels
  * Bench PSU
  * High-current PSU (>30A @ 12V)
  * Multimeter
@@ -21,10 +20,8 @@
 
 ## Procedure
 
-*Execution time*: 3 minutes per board assuming no case panel replacement.
+*Execution time*: 3 minutes per board.
 
- 1. Ensure that the procedure outlined in the *General Maintenance* document has been carried out.
- 1. Inspect the case for any cracks or missing pieces and replace panels as necessary.
  1. Tug the battery wires and check that the ring terminals are not loose and that the insulation has not pulled back.
  1. Connect the battery wires to the bench PSU.
  1. Connect the power board to the laptop with the micro USB cable.

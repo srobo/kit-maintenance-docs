@@ -8,7 +8,6 @@
 
 ## Procedure
 
- 1. Ensure that the procedure outlined in the *General Maintenance* document has been carried out.
  1. Run ****SOMETHING****.
  1. Plug the USB hub into the laptop and check that ****SOMETHING**** is printed.
  1. Plug the USB memory sticks into the hub and check that ****SOMETHING**** is printed for each one.
