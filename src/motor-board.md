@@ -27,4 +27,4 @@
  1. Run `./scripts/motor_test.py` and follow the instructions.
 
 [^2]: Farnell 3882275
-[^4]: Farnell 3881854
+[^3]: Farnell 3881854
