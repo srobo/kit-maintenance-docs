@@ -36,13 +36,13 @@
  1. Turn on the load and start the stop watch.
  1. While discharging check the following:
     a. The battery is not swelling.
-    a. The temperature is less than **36°C**.
-    a. The multimeter voltage is above **10.6V**.
+    a. The temperature is less than **10°C** above ambient.
+    a. The multimeter voltage is above **10.5V**.
     a. The cell monitor is not beeping.
  1. After **2 minutes** turn off the load.
  1. Leave the battery for **30 seconds** and then check the following:
     a. The battery has not swelled any more than before the test.
-    a. The temperature is less than **36°C**.
+    a. The temperature is less than **10°C** above ambient.
     a. The multimeter voltage is above **11.6V**.
     a. The cell monitor indicates all cells are above **3.85V** and all cells are within **60mV** of each other.
 
