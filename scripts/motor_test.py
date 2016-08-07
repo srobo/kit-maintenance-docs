@@ -40,6 +40,6 @@ if m is None:
 print "This script will spin each motor forwards and backwards"
 
 for x in [100*math.sin(2*math.pi*(x/100.0)) for x in range(100)]:
-    m.m0.power(x)
-    m.m1.power(x)
+    m.m0.power = x
+    m.m1.power = x
     time.sleep(0.05)
