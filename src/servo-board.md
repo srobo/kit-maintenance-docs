@@ -11,7 +11,7 @@
 
 ## Set up
 
- 1. Set the bench PSU to **12V±0.1V** with a **100mA±10mA** current limit.
+ 1. Set the bench PSU to **12V±0.1V** with a **200mA±10mA** current limit.
 
 ## Procedure
 
