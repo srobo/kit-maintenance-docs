@@ -1,2 +1,3 @@
 *.pdf
 .*.swp
+.mypy_cache
