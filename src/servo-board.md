@@ -19,10 +19,9 @@
 
  1. Plug the bench PSU into the power input.
  1. Turn on the bench PSU.
- 1. Check that the green power LED near the power input connector lights up.
- 1. Check that the board draws no more than **40mA**.
  1. Plug the servo board into the laptop using the micro USB cable.
  1. Check that the green LED next to the USB socket lights up.
+ 1. Check that the board draws no more than **40mA**.
  1. Run `./scripts/servo_test.py` and follow the instructions.
 
 [^2]: Farnell 3882275
