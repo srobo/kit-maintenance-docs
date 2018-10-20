@@ -1,0 +1,3 @@
+pyudev
+libusb1
+pyserial
