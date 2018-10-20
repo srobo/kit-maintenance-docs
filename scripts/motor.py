@@ -4,22 +4,22 @@ import serial
 
 SERIAL_BAUD = 1000000
 
-CMD_RESET = chr(0)
-CMD_VERSION = chr(1)
-CMD_SPEED0 = chr(2)
-CMD_SPEED1 = chr(3)
-CMD_BOOTLOADER = chr(4)
+CMD_RESET = b'\x00'
+CMD_VERSION = b'\x01'
+CMD_SPEED0 = b'\x02'
+CMD_SPEED1 = b'\x03'
+CMD_BOOTLOADER = b'\x04'
 
-SPEED_BRAKE = chr(2)
+SPEED_BRAKE = b'\x02'
 
 # The maximum value that the motor board will accept
 PWM_MAX = 100
 
 # The USB model string:
-USB_MODEL = "MCV4B"
+USB_MODEL = b'MCV4B'
 
 # The expected firmware version string
-EXPECTED_FW_VER = "MCV4B:3\n"
+EXPECTED_FW_VER = b'MCV4B:3\n'
 
 logger = logging.getLogger( "sr.motor" )
 
@@ -75,7 +75,7 @@ class Motor(object):
                 self.serial.write(CMD_VERSION)
                 r = self.serial.readline()
 
-            if len(r) > 0 and r[-1] == "\n":
+            if len(r) > 0 and r.endswith(b'\n'):
                 "Successfully read the firmware version"
                 return r
 
@@ -118,7 +118,7 @@ class MotorChannel(object):
         self._power = 0
 
     def _encode_speed(self, speed):
-        return chr(speed + 128)
+        return bytes([speed + 128])
 
     @property
     def power(self):
