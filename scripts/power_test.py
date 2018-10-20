@@ -35,25 +35,25 @@ def get_power_board():
 p = get_power_board()
 
 if p is None:
-    print "Could not find power board"
+    print("Could not find power board")
     exit(1)
 
-print "This script will turn the outputs H0, H1, L0 and L1 on incrementally."
-print "The power board should shutdown all outputs and start beeping when the last output turns on"
+print("This script will turn the outputs H0, H1, L0 and L1 on incrementally.")
+print("The power board should shutdown all outputs and start beeping when the last output turns on")
 
-print "Turning on H0"
+print("Turning on H0")
 p.output[0] = 1
 time.sleep(2)
 
-print "Turning on H1"
+print("Turning on H1")
 p.output[1] = 1
 time.sleep(2)
 
-print "Turning on L0"
+print("Turning on L0")
 p.output[2] = 1
 time.sleep(2)
 
-print "Turning on L1"
+print("Turning on L1")
 p.output[3] = 1
 
-print "The power board should have now shutdown all outputs and started beeping. If not then there is an issue with the over current protection and the board is a fail."
+print("The power board should have now shutdown all outputs and started beeping. If not then there is an issue with the over current protection and the board is a fail.")

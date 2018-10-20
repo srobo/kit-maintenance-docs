@@ -34,10 +34,10 @@ def get_motor_board():
 m = get_motor_board()
 
 if m is None:
-    print "Could not find motor board"
+    print("Could not find motor board")
     exit(1)
 
-print "This script will spin each motor forwards and backwards"
+print("This script will spin each motor forwards and backwards")
 
 for x in [100*math.sin(2*math.pi*(x/100.0)) for x in range(100)]:
     m.m0.power = x
