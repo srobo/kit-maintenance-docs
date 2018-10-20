@@ -5,15 +5,10 @@ import time
 
 def _list_usb_devices(model, subsystem=None):
     "Create a sorted list of USB devices of the given type"
-    def _udev_compare_serial(x, y):
-        """Compare two udev serial numbers"""
-        return cmp(x["ID_SERIAL_SHORT"],
-                   y["ID_SERIAL_SHORT"])
-
     udev = pyudev.Context()
     devs = list(udev.list_devices( ID_MODEL = model, subsystem=subsystem ))
     # Sort by serial number
-    devs.sort( cmp = _udev_compare_serial )
+    devs.sort( key = lambda x: x['ID_SERIAL_SHORT'] )
     return devs
 
 def get_power_board():
