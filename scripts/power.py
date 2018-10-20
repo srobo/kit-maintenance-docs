@@ -14,26 +14,26 @@ class Battery(object):
         return round(self._get_vi()[1], 2)
 
     def _get_vi(self):
-    	""" Measured in mA and mV"""
-    	result = self.handle.controlRead(0x80, 64, 0, Power.CMD_READ_batt, 8)
-    	current, voltage = struct.unpack("ii", result)
-    	return voltage, current
+        """ Measured in mA and mV"""
+        result = self.handle.controlRead(0x80, 64, 0, Power.CMD_READ_batt, 8)
+        current, voltage = struct.unpack("ii", result)
+        return voltage, current
 
 class Outputs(object):
     def __init__(self, handle):
         self.handle = handle
 
     def __setitem__(self, index, value):
-    	if index > 5 or index < 0:
-    		raise Exception("Setting out-of-range rail address")
+        if index > 5 or index < 0:
+            raise Exception("Setting out-of-range rail address")
 
-    	if value:
-    		val = True
-    	else:
-    		val = False
+        if value:
+            val = True
+        else:
+            val = False
 
-    	cmd = Power.CMD_WRITE_output0 + index
-    	self.handle.controlWrite(0, 64, val, cmd, "\0")
+        cmd = Power.CMD_WRITE_output0 + index
+        self.handle.controlWrite(0, 64, val, cmd, "\0")
 
 
 class Power:
@@ -58,7 +58,7 @@ class Power:
     def __init__(self, path, busnum, devnum, serialnum = None):
         self.serialnum = serialnum
 
-    	self.ctx = usb1.USBContext()
+        self.ctx = usb1.USBContext()
         self.handle = None
         for dev in self.ctx.getDeviceList():
             if dev.getBusNumber() == busnum and dev.getDeviceAddress() == devnum:
@@ -74,25 +74,25 @@ class Power:
         return "Power( serialnum = \"{0}\" )".format( self.serialnum )
 
     def set_run_led(self, status):
-    	if status:
-    		val = True
-    	else:
-    		val = False
+        if status:
+            val = True
+        else:
+            val = False
 
-    	self.handle.controlWrite(0, 64, val, Power.CMD_WRITE_runled, 0)
+        self.handle.controlWrite(0, 64, val, Power.CMD_WRITE_runled, 0)
 
     def set_error_led(self, status):
-    	if status:
-    		val = True
-    	else:
-    		val = False
+        if status:
+            val = True
+        else:
+            val = False
 
-    	self.handle.controlWrite(0, 64, val, Power.CMD_WRITE_errorled, 0)
+        self.handle.controlWrite(0, 64, val, Power.CMD_WRITE_errorled, 0)
 
     def read_button(self):
-    	result = self.handle.controlRead(0x80, 64, 0, Power.CMD_READ_button, 4)
-    	status, = struct.unpack("i", result)
-    	if status == 0:
-    		return False
-    	else:
-    		return True
+        result = self.handle.controlRead(0x80, 64, 0, Power.CMD_READ_button, 4)
+        status, = struct.unpack("i", result)
+        if status == 0:
+            return False
+        else:
+            return True

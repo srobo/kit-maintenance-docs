@@ -10,9 +10,9 @@ def flash_ruggeduino(fw_hex):
                            "-P" ,"/dev/ttyACM0",  "-D", "-U",
                            "flash:w:{0}:i".format(fw_hex)])
 
-print "Flashing test firmware:"
+print("Flashing test firmware:")
 flash_ruggeduino(test_fw)
-print "Look at the LED. Slow flash = PASS; Fast flash = FAIL;"
+print("Look at the LED. Slow flash = PASS; Fast flash = FAIL;")
 time.sleep(5)
-print "Flashing SR firmware:"
+print("Flashing SR firmware:")
 flash_ruggeduino(fw)
