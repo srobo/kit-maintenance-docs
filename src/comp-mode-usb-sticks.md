@@ -51,8 +51,9 @@ for _ in range(R.zone + 1):
 *Execution time*: 20 seconds per USB stick.
 
  1. Plug in a comp-mode stick to test
- 1. Run `./scripts/comp_usb_test.py`.
+ 1. Run `./scripts/comp_usb_test.py /path/to/mount/point`.
  1. Check that it prints the arena and zone the same as the physical label for
     the USB stick
  1. Check that it prints a success message
- 1. Unplug the stick
+    (if successful the script will unmount the stick, so it can be removed
+    immediately)
