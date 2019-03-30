@@ -57,3 +57,8 @@ for _ in range(R.zone + 1):
  1. Check that it prints a success message
     (if successful the script will unmount the stick, so it can be removed
     immediately)
+
+Also, to check that the sticks work in kit; for an example of each arena/corner:
+ 1. Plug the comp-mode stick into the kit
+ 1. Boot the kit, after the start button is pressed it should beep for one more
+    time than the number of the corner, i.e: corner 2 should beep three times
