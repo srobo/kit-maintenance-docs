@@ -1,3 +1,4 @@
 pyudev
 libusb1
 pyserial
+pyusb
