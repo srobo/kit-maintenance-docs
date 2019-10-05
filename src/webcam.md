@@ -18,5 +18,5 @@ Now plug in the test camera and check that it is relatively close to the base im
 - Exposure is similar to the base image.
 - Exposure adapts to low light (cover it with your hand).
 
-Don't worry about the saturation/colour temperature differences for of the image,our vision
+Don't worry about the saturation/colour temperature differences for of the image, our vision
 system converts the outputs to black and white.
