@@ -24,6 +24,7 @@
  1. Check that the board draws no more than **40mA**
  1. Plug the motor board into the laptop using the micro USB cable.
  1. Check that the green LED (next to the USB socket) lights up.
+ 1. Check that the USB LED stays on when the cable is wiggled.
  1. Run `./scripts/motor_test.py` and follow the instructions.
 
 [^2]: Farnell 3882275
