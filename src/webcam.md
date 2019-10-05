@@ -8,6 +8,8 @@ Take a photo with a working webcam as a base to compare others to.
 
 ## Procedure
 
+*Execution time*: a few seconds per camera.
+
 Open a camera program (if you're using `cheese` you'll need to press the camera swap button 
 in the bottom left the first time to change the input from your laptop camera)
 
