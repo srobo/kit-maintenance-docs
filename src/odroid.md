@@ -6,7 +6,7 @@
  * Power board (tested with a working buzzer)
  * Odroid
  * Power board on|off loop
- * Odroid power cable
+ * Odroid power cable (make sure this is plugged in to a 5V port)
  * Micro USB cable
  * USB stick (with the following code in a robot.zip from the IDE):
     ``` python
@@ -18,6 +18,11 @@
         R.power.beep(200, note='a')
         time.sleep(0.6)
     ```
+
+Once assembled it should look like so:
+![Power board](images/power_board.jpg)
+
+![Odroid](images/odroid.jpg)
 
 ## Procedure
 
