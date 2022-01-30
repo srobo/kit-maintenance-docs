@@ -1,4 +1,4 @@
-# Odroid Testing
+# ODROID Testing
 
 ## Equipment
 
@@ -8,18 +8,21 @@
  * Power board on|off loop
  * Odroid power cable (make sure this is plugged in to a 5V port)
  * Micro USB cable
- * USB stick (with the following code in a robot.zip from the IDE):
+ * USB stick (with the following code [in a robot.zip](https://studentrobotics.org/docs/programming/getting_code_on_the_robot)):
     ``` python
     import time
-    from sr.robot import *
+    from sr.robot3 import Robot, Note
+    
     R = Robot()
-
+    
     while True:
-        R.power.beep(200, note='a')
+        R.power_board.piezo.buzz(0.2, Note.A7)
         time.sleep(0.6)
     ```
 
 Once assembled it should look like so:
+
+
 ![Power board](images/power_board.jpg)
 
 ![Odroid](images/odroid.jpg)
