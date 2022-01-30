@@ -21,6 +21,8 @@
     ```
 
 Once assembled it should look like so:
+
+
 ![Power board](images/power_board.jpg)
 
 ![Odroid](images/odroid.jpg)
