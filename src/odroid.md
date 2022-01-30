@@ -8,7 +8,7 @@
  * Power board on|off loop
  * Odroid power cable (make sure this is plugged in to a 5V port)
  * Micro USB cable
- * USB stick (with the following code in a robot.zip):
+ * USB stick ([with the following code in a robot.zip](https://studentrobotics.org/docs/programming/getting_code_on_the_robot)):
     ``` python
     import time
     from sr.robot3 import Robot, Note
