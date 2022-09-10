@@ -2,6 +2,9 @@
 import subprocess
 import time
 
+# TODO: lookup the serial port
+# TODO: remove requirement that we're in the scripts directory
+
 test_fw = "firmware/ruggeduino_test-1.hex"
 fw = "firmware/ruggeduino-1.hex"
 
