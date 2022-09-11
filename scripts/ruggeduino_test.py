@@ -1,12 +1,15 @@
 #!/usr/bin/env python
+import os.path
 import subprocess
 import time
 
-# TODO: lookup the serial port
-# TODO: remove requirement that we're in the scripts directory
+MY_DIR = os.path.dirname(os.path.abspath(__file__))
+FIRMWARE_DIR = os.path.join(MY_DIR, 'firmware')
 
-test_fw = "firmware/ruggeduino_test-1.hex"
-fw = "firmware/ruggeduino-1.hex"
+# TODO: lookup the serial port
+
+test_fw = os.path.join(FIRMWARE_DIR, "ruggeduino_test-1.hex")
+fw = os.path.join(FIRMWARE_DIR, "ruggeduino-1.hex")
 
 def flash_ruggeduino(fw_hex):
     subprocess.check_call(["avrdude", "-p", "atmega328p", "-c", "arduino",
