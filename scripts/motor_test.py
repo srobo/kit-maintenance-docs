@@ -26,15 +26,21 @@ def get_motor_board():
 
     return srdev
 
-m = get_motor_board()
 
-if m is None:
-    print("Could not find motor board")
-    exit(1)
+def main():
+    m = get_motor_board()
 
-print("This script will spin each motor forwards and backwards")
+    if m is None:
+        print("Could not find motor board")
+        exit(1)
 
-for x in [100*math.sin(2*math.pi*(x/100.0)) for x in range(100)]:
-    m.m0.power = x
-    m.m1.power = x
-    time.sleep(0.05)
+    print("This script will spin each motor forwards and backwards")
+
+    for x in [100*math.sin(2*math.pi*(x/100.0)) for x in range(100)]:
+        m.m0.power = x
+        m.m1.power = x
+        time.sleep(0.05)
+
+
+if __name__ == '__main__':
+    main()
