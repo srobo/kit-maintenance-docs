@@ -9,7 +9,7 @@ FIRMWARE_DIR = os.path.join(MY_DIR, 'firmware')
 # TODO: lookup the serial port
 
 test_fw = os.path.join(FIRMWARE_DIR, "ruggeduino_test-1.hex")
-fw = os.path.join(FIRMWARE_DIR, "ruggeduino-1.hex")
+fw = os.path.join(FIRMWARE_DIR, "ruggeduino-2.hex")
 
 def flash_ruggeduino(fw_hex):
     subprocess.check_call(["avrdude", "-p", "atmega328p", "-c", "arduino",
